@@ -1,5 +1,69 @@
 # Introduction to Docker 🐳
 
+## Docker commands
+
+### <strong>Show All Images</strong><Br>
+Show all images we have on or SO
+
+```
+docker images
+```
+
+### <strong>Download Image</strong><Br>
+>To download an image we use docker pull. With just that command we download the last version by default
+
+
+```
+docker pull node
+```
+
+### **· Create Containter**<Br>
+To create a container. It returns an ID, for example: b62eab2930c25c5757f16cacf77fb210f9884335fb24eaa331dd0173f8b09a3b 
+```
+docker create mongo
+```
+#### **Create container with custom name**
+```
+docker create --name <customname> mongo
+```
+
+### <strong>· Start Container</strong><br>
+To start our container we've to write:
+```
+docker start <our-container-id>
+```
+### **Create and run container**
+Is possible to create and run a container with this command line
+
+```
+docker run --name mymongo -p 27017:27017 mongo
+```
+>**Docker start** command will start any stopped container. If you used docker create command to create a container, you can start it with this command.
+
+>**Docker run** command is a combination of create and start as it creates a new container and starts it immediately.
+
+### **· Show Containers**<br>
+To show our containers we'll write <strong>docker ps</strong>, then it returns a new list which contains a short ID. We can use in the future that short ID tu start our container
+
+<strong>Show containers running (active)    
+
+```
+docker ps
+```
+<strong>  Show all containers running and stopped 
+
+```
+docker ps -a
+```   
+
+### · **Stop Containers**<br>
+We stop our containers with the command above. 
+> NOTE: we can use our short ID too
+
+
+```
+docker stop <full container ID or short container ID>
+```
 
 ## About 
 
